@@ -1,8 +1,32 @@
-let widgetCount = 0;
-
-//document.getElementById("counter-btn");
-
-export default function addOne() {
-  widgetCount += 1;
-  return widgetCount;
+function addOne() {
+  widgetCount++;
 }
+
+function insertCountWidget(divId) {
+  const counterDiv = document.getElementById(divId);
+  window.widgetCount = 0;
+  counterDiv.innerHTML =
+    `
+    <div id="counter" style="background:lightgrey; text-align:center">
+      <h1>
+        Counter widget
+      </h1>
+      <button id="counter-btn" style="background:lightblue" onclick="addOne()">
+        Count Up!
+      </button>
+    </div>
+  `;
+
+
+
+  // return `
+  //   <div id="counter" style="background:lightgrey; text-align:center">
+  //     <h1>
+  //       Counter widget
+  //     </h1>
+  //     <button id="counter-btn" style="background:lightblue" onclick="addOne()">
+  //       Count Up!
+  //     </button>
+  //   </div>
+  // `
+};
