@@ -1,37 +1,34 @@
-window.widgetCount = 0;
-
-function handleClick(spanId) {
-  widgetCount++;
-  console.log(spanId)
-  // const countSpan = document.getElementById(spanId);
-  spanId.innerHTML = widgetCount;
-
-}
+widgetCount = 0; //adds counter var to global window obj
 
 function insertCountWidget(divId, spanId) {
+  spanId ? document.getElementById(spanId).innerHTML = 0 : ''; //if spanId provided, set initial span to 0;
   const counterDiv = document.getElementById(divId);
   counterDiv.innerHTML =
     `
-    <div id="counter" style="background:lightgrey; text-align:center">
-      <h1>
-        Counter widget
-      </h1>
-      <button id="counter-btn" style="background:lightblue" onclick="handleClick(${spanId})">
-        Count Up!
-      </button>
-    </div>
+    <style>
+      #counter-btn {
+        background:rgb(84,132,227);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #widget-heading {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+
+    <h4 id="widget-heading">
+      Counting widget
+    </h4>
+    <button id="counter-btn" onclick="handleCounterClick(${spanId ? spanId : ''})">
+      Count Up!
+    </button>
   `;
-
-
-
-  // return `
-  //   <div id="counter" style="background:lightgrey; text-align:center">
-  //     <h1>
-  //       Counter widget
-  //     </h1>
-  //     <button id="counter-btn" style="background:lightblue" onclick="handleClick()">
-  //       Count Up!
-  //     </button>
-  //   </div>
-  // `
 };
+
+//increment count and, if provided, update span
+function handleCounterClick(countSpan) {
+  widgetCount++;
+  countSpan ? countSpan.innerHTML = widgetCount : '';
+}
