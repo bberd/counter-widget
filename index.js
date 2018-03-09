@@ -6,9 +6,15 @@ function insertCountWidget(divId, spanId) {
   counterDiv.innerHTML =
     `
     <style>
+      #widget {
+        display: inline-block;
+        padding: 0px 70px 50px;
+        border: 1px solid black;
+        background: rgb(243,243,243);
+    }
       #counter-btn {
         background:rgb(84,132,227);
-        padding: 10px 20px;
+        padding: 6px 23px;
         border-radius: 5px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
@@ -18,12 +24,14 @@ function insertCountWidget(divId, spanId) {
       }
     </style>
 
-    <h4 id="widget-heading">
-      Counting widget
-    </h4>
-    <button id="counter-btn" onclick="handleCounterClick(${spanId ? spanId : ''})">
-      Count Up!
-    </button>
+    <div id="widget">
+      <h4 id="widget-heading">
+        Counting widget
+      </h4>
+      <button id="counter-btn" onclick="handleCounterClick(${spanId ? spanId : ''})">
+        Count Up!
+      </button>
+    </div>
   `;
 };
 
