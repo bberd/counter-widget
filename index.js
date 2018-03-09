@@ -1,11 +1,10 @@
 widgetCount = 0; //adds counter var to global window obj
 
 function insertCountWidget(divId, spanId) {
-  spanId ? document.getElementById(spanId).innerHTML = 0 : ''; //if spanId provided, display initial count as 0;
+  spanId ? document.getElementById(spanId).innerHTML = 0 : ''; //if spanId provided, display initial count as 0
   const counterDiv = document.getElementById(divId);
   counterDiv.innerHTML =
-    `
-    <style>
+    `<style>
       #widget {
         display: inline-block;
         padding: 0px 70px 50px;
@@ -31,9 +30,8 @@ function insertCountWidget(divId, spanId) {
       <button id="counter-btn" onclick="handleCounterClick(${spanId ? spanId : ''})">
         Count Up!
       </button>
-    </div>
-  `;
-};
+    </div>`;
+}
 
 //increment count and, if provided, update displayed count
 function handleCounterClick(countSpan) {
