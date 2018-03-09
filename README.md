@@ -31,5 +31,4 @@ A widget that can be dropped into your HTML to keep an incrementing count
   <script>insertCountWidget('widgetPH', 'countPH')</script>
 </body>
 </html>
-...
 ```
