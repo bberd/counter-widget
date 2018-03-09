@@ -18,14 +18,14 @@ A widget that can be dropped into your HTML to keep an incrementing count
     </h2>
     <h3>
       You have counted to:
-      <span id="spanPH"></span>
+      <span id="countPH"></span>
     </h3>
   </div>
 
   <div id="widgetPH" style="display:inline-block"></div>
 
   <script src="https://rawgit.com/bberd/counter-widget/master/index.js"></script>
-  <script>insertCountWidget('widgetPH', 'spanPH')</script>
+  <script>insertCountWidget('widgetPH', 'countPH')</script>
 </body>
 ...
 ```
