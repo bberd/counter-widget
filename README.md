@@ -1,5 +1,5 @@
 # counter-widget
-A widget that can be inserted into any HTML to keep an incrementing count
+A widget that can be dropped into your HTML to keep an incrementing count
 
 ### How to Use
 1. load *index.js* or its contents into your javascript
