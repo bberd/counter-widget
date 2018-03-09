@@ -4,8 +4,8 @@ A widget that can be inserted into any HTML to keep an incrementing count
 ### How to Use
 1. load *index.js* or its contents into your javascript
 2. call *insertCountWidget(arg1, arg2)*, where:
-   - *arg1* is the id attribute of the element placeholder where the widget is to be placed
-   - *arg2*(optional) is the id attribute of the element placeholder where the count is to be displayed
+   - *arg1* is the id attribute of the placeholder element where the widget is to be placed
+   - *arg2*(optional) is the id attribute of the placeholder element where the count is to be displayed
      - Note: If omitting arg2, the current count can be found on the window object as *window.widgetCount* or *widgetCount*, returning an integer.
 
 ### Example
